@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website — Tugas PTS</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Instrument Serif (Editorial/Aesthetic) & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-canvas: #f8f6f0;         /* Cream hangat */
+            --card-bg: #ffffff;           /* Putih bersih */
+            --card-border: #eae6dd;       /* Border halus */
+            --text-main: #1c1b18;         /* Hitam lembut */
+            --text-muted: #78756e;       /* Abu-abu hangat */
+            --accent-sage: #5b7065;       /* Hijau Sage / Soft Accent */
+            --accent-soft: #f0ebd9;       /* Sorot krem terang */
+            --shadow-soft: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        body {
+            background-color: var(--bg-canvas);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Tipografi Editorial */
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Instrument Serif', serif;
+            font-weight: 400;
+        }
+
+        .serif-italic {
+            font-style: italic;
+        }
+
+        /* Bento Card Styling */
+        .aesthetic-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .aesthetic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+        }
+
+        /* Foto Profil Utama */
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--bg-canvas);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        /* Soft Pill / Badge */
+        .pill-badge {
+            display: inline-block;
+            background-color: var(--bg-canvas);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin: 3px;
+            transition: all 0.2s ease;
+        }
+
+        .pill-badge:hover {
+            background-color: var(--accent-sage);
+            color: #ffffff;
+            border-color: var(--accent-sage);
+        }
+
+        /* Timeline Items */
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            border-left: 1.5px solid var(--card-border);
+            margin-bottom: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 6px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: var(--accent-sage);
+        }
+
+        /* Gallery Grid */
+        .gallery-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body class="py-5">
+
+    <div class="container" style="max-width: 960px;">
+
+        <!-- 1. HEADER / HERO -->
+        <header class="aesthetic-card mb-4 text-center p-md-5">
+            <div class="mb-3">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Foto Profil" class="profile-img">
+            </div>
+            <span class="badge rounded-pill text-uppercase px-3 py-2 mb-2" style="background-color: var(--accent-soft); color: var(--accent-sage); font-weight: 600;">Siswa SMKN 3 Kendal</span>
+            <h1 class="display-3 mb-2">Halo, Saya <span class="serif-italic">[Nama Kamu]</span></h1>
+            <p class="text-muted max-w-md mx-auto fs-6 mb-0">Seorang pelajar yang menyukai dunia pemrograman, eksplorasi desain, dan pembelajar hal baru.</p>
+        </header>
+
+        <div class="row g-4 mb-4">
+            <!-- 2. DESKRIPSI PRIBADI (Poin 3) -->
+            <div class="col-md-7">
+                <div class="aesthetic-card h-100 d-flex flex-column justify-content-center">
+                    <span class="text-uppercase tracking-wider text-muted small fw-bold mb-2">Tentang Saya</span>
+                    <h2 class="display-6 mb-3">Mengenal Lebih <span class="serif-italic">Dekat</span></h2>
+                    <p class="text-muted leading-relaxed mb-0 fs-6">
+                        Saya adalah siswa SMKN 3 Kendal yang memiliki ketertarikan tinggi pada pengembangan teknologi. Saya merupakan pribadi yang teliti, cepat memahami hal baru (*fast learner*), serta selalu pantang menyerah dalam memecahkan setiap tantangan pemrograman.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3. BIODATA (Poin 1) -->
+            <div class="col-md-5">
+                <div class="aesthetic-card h-100">
+                    <span class="text-uppercase tracking-wider text-muted small fw-bold mb-2 d-block">Informasi</span>
+                    <h3 class="h2 mb-4">Biodata <span class="serif-italic">Diri</span></h3>
+                    <ul class="list-unstyled mb-0 fs-6">
+                        <li class="d-flex justify-content-between py-2 border-bottom border-light-subtle">
+                            <span class="text-muted">Nama</span>
+                            <span class="fw-medium">[Nama Lengkap]</span>
+                        </li>
+                        <li class="d-flex justify-content-between py-2 border-bottom border-light-subtle">
+                            <span class="text-muted">TTL</span>
+                            <span class="fw-medium">Kendal, 01 Jan 2008</span>
+                        </li>
+                        <li class="d-flex justify-content-between py-2 border-bottom border-light-subtle">
+                            <span class="text-muted">Sekolah</span>
+                            <span class="fw-medium">SMKN 3 Kendal</span>
+                        </li>
+                        <li class="d-flex justify-content-between pt-2">
+                            <span class="text-muted">Status</span>
+                            <span class="fw-medium text-success">Pelajar Aktif</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. KELEBIHAN & KOMPETENSI (Poin 6 & 8) -->
+        <div class="aesthetic-card mb-4">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h3 class="h2 mb-3">Kelebihan <span class="serif-italic">(Soft Skills)</span></h3>
+                    <div>
+                        <span class="pill-badge">Fast Learner</span>
+                        <span class="pill-badge">Problem Solver</span>
+                        <span class="pill-badge">Teliti & Detail</span>
+                        <span class="pill-badge">Pantang Menyerah</span>
+                        <span class="pill-badge">Kerja Sama Tim</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="h2 mb-3">Kompetensi <span class="serif-italic">(Hard Skills)</span></h3>
+                    <div>
+                        <span class="pill-badge">HTML5 & CSS3</span>
+                        <span class="pill-badge">Python</span>
+                        <span class="pill-badge">PHP</span>
+                        <span class="pill-badge">C#</span>
+                        <span class="pill-badge">Git & GitHub</span>
+                        <span class="pill-badge">VS Code</span>
+                        <span class="pill-badge">Figma & Canva</span>
+                        <span class="pill-badge">Pengolahan Data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. TRACK RECORD (Poin 4, 5, & 7) -->
+        <div class="row g-4 mb-4">
+            <!-- Riwayat Pendidikan -->
+            <div class="col-md-4">
+                <div class="aesthetic-card h-100">
+                    <h3 class="h2 mb-4">Pendidikan</h3>
+                    <div class="timeline-item">
+                        <div class="fw-semibold">SMKN 3 Kendal</div>
+                        <div class="small text-muted">2025 — Sekarang</div>
+                    </div>
+                    <div class="timeline-item mb-0">
+                        <div class="fw-semibold">SMPN 1 Cisaga</div>
+                        <div class="small text-muted">2022 — 2025</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Riwayat Organisasi -->
+            <div class="col-md-4">
+                <div class="aesthetic-card h-100">
+                    <h3 class="h2 mb-4">Organisasi</h3>
+                    <div class="timeline-item">
+                        <div class="fw-semibold">Paskibra</div>
+                        <div class="small text-muted">SMKN 3 Kendal</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="fw-semibold">OSIS</div>
+                        <div class="small text-muted">SMPN 1 Cisaga</div>
+                    </div>
+                    <div class="timeline-item mb-0">
+                        <div class="fw-semibold">Pramuka</div>
+                        <div class="small text-muted">SMPN 1 Cisaga</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prestasi -->
+            <div class="col-md-4">
+                <div class="aesthetic-card h-100">
+                    <h3 class="h2 mb-4">Prestasi</h3>
+                    <div class="timeline-item mb-0">
+                        <div class="fw-semibold">Juara Olimpiade PAI / Islam</div>
+                        <div class="small text-muted mb-2">Tingkat Komisariat</div>
+                        <p class="small text-muted mb-0">Raihan juara pada kompetisi Pendidikan Agama Islam tingkat SMP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. PORTOFOLIO KARYA (Poin 9) -->
+        <div class="aesthetic-card mb-4">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <span class="text-uppercase tracking-wider text-muted small fw-bold">Karya</span>
+                    <h2 class="display-6 m-0">Portofolio <span class="serif-italic">Terpilih</span></h2>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-3 border rounded-4 bg-light-subtle h-100">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" class="portfolio-img" alt="Karya Web">
+                        <h5 class="fw-semibold mb-1">Web Profile Aesthetic</h5>
+                        <p class="small text-muted mb-0">Pembuatan web profil pribadi menggunakan HTML, CSS, dan Bootstrap 5.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border rounded-4 bg-light-subtle h-100">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80" class="portfolio-img" alt="Karya Desain">
+                        <h5 class="fw-semibold mb-1">UI/UX Design Concept</h5>
+                        <p class="small text-muted mb-0">Eksplorasi antarmuka aplikasi sederhana berbasis Figma & Canva.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border rounded-4 bg-light-subtle h-100">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" class="portfolio-img" alt="Karya Script">
+                        <h5 class="fw-semibold mb-1">Python Logic Program</h5>
+                        <p class="small text-muted mb-0">Pengembangan *script* logika dasar sederhana menggunakan bahasa Python.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. GALERI FOTO DIRI (Poin 2) -->
+        <div class="aesthetic-card mb-5">
+            <div class="mb-4">
+                <span class="text-uppercase tracking-wider text-muted small fw-bold">Momen</span>
+                <h2 class="display-6 m-0">Galeri <span class="serif-italic">Foto</span></h2>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80" class="gallery-img" alt="Foto Diri 1">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80" class="gallery-img" alt="Foto Diri 2">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=500&q=80" class="gallery-img" alt="Foto Diri 3">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80" class="gallery-img" alt="Foto Diri 4">
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="text-center text-muted small py-4">
+            <p class="mb-0">&copy; 2026 Crafted with care for Tugas PTS — SMKN 3 Kendal</p>
+        </footer>
+
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
